@@ -1,0 +1,17 @@
+C:\Users\ericm\Documents\University\Malmö\C# höst 2022\Csharp_Ass6\Assignmen6\bin\Debug\net7.0-windows\Assignmen6.exe
+C:\Users\ericm\Documents\University\Malmö\C# höst 2022\Csharp_Ass6\Assignmen6\bin\Debug\net7.0-windows\Assignmen6.deps.json
+C:\Users\ericm\Documents\University\Malmö\C# höst 2022\Csharp_Ass6\Assignmen6\bin\Debug\net7.0-windows\Assignmen6.runtimeconfig.json
+C:\Users\ericm\Documents\University\Malmö\C# höst 2022\Csharp_Ass6\Assignmen6\bin\Debug\net7.0-windows\Assignmen6.dll
+C:\Users\ericm\Documents\University\Malmö\C# höst 2022\Csharp_Ass6\Assignmen6\bin\Debug\net7.0-windows\Assignmen6.pdb
+C:\Users\ericm\Documents\University\Malmö\C# höst 2022\Csharp_Ass6\Assignmen6\obj\Debug\net7.0-windows\Assignmen6.csproj.AssemblyReference.cache
+C:\Users\ericm\Documents\University\Malmö\C# höst 2022\Csharp_Ass6\Assignmen6\obj\Debug\net7.0-windows\Assignmen6.csproj.GenerateResource.cache
+C:\Users\ericm\Documents\University\Malmö\C# höst 2022\Csharp_Ass6\Assignmen6\obj\Debug\net7.0-windows\Assignmen6.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ericm\Documents\University\Malmö\C# höst 2022\Csharp_Ass6\Assignmen6\obj\Debug\net7.0-windows\Assignmen6.AssemblyInfoInputs.cache
+C:\Users\ericm\Documents\University\Malmö\C# höst 2022\Csharp_Ass6\Assignmen6\obj\Debug\net7.0-windows\Assignmen6.AssemblyInfo.cs
+C:\Users\ericm\Documents\University\Malmö\C# höst 2022\Csharp_Ass6\Assignmen6\obj\Debug\net7.0-windows\Assignmen6.csproj.CoreCompileInputs.cache
+C:\Users\ericm\Documents\University\Malmö\C# höst 2022\Csharp_Ass6\Assignmen6\obj\Debug\net7.0-windows\Assignmen6.dll
+C:\Users\ericm\Documents\University\Malmö\C# höst 2022\Csharp_Ass6\Assignmen6\obj\Debug\net7.0-windows\refint\Assignmen6.dll
+C:\Users\ericm\Documents\University\Malmö\C# höst 2022\Csharp_Ass6\Assignmen6\obj\Debug\net7.0-windows\Assignmen6.pdb
+C:\Users\ericm\Documents\University\Malmö\C# höst 2022\Csharp_Ass6\Assignmen6\obj\Debug\net7.0-windows\Assignmen6.genruntimeconfig.cache
+C:\Users\ericm\Documents\University\Malmö\C# höst 2022\Csharp_Ass6\Assignmen6\obj\Debug\net7.0-windows\ref\Assignmen6.dll
+C:\Users\ericm\Documents\University\Malmö\C# höst 2022\Csharp_Ass6\Assignmen6\obj\Debug\net7.0-windows\Assignmen6.ToDoList.resources
