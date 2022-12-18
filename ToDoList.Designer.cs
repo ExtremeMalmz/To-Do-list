@@ -45,7 +45,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.toDoTextBox = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.eventListBox = new System.Windows.Forms.ListBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.label3 = new System.Windows.Forms.Label();
@@ -182,22 +185,52 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.eventListBox);
-            this.groupBox1.Location = new System.Drawing.Point(12, 286);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Location = new System.Drawing.Point(12, 277);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1486, 443);
+            this.groupBox1.Size = new System.Drawing.Size(1486, 452);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "To do list";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(432, 44);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(135, 32);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "Description";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(287, 44);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 32);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "Priority";
             // 
             // eventListBox
             // 
             this.eventListBox.FormattingEnabled = true;
             this.eventListBox.ItemHeight = 32;
-            this.eventListBox.Location = new System.Drawing.Point(6, 47);
+            this.eventListBox.Location = new System.Drawing.Point(6, 79);
             this.eventListBox.Name = "eventListBox";
-            this.eventListBox.Size = new System.Drawing.Size(1439, 388);
+            this.eventListBox.Size = new System.Drawing.Size(1439, 356);
             this.eventListBox.TabIndex = 0;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 44);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(171, 32);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Date and Time";
             // 
             // openFileDialog1
             // 
@@ -228,10 +261,11 @@
             this.Controls.Add(this.dateTimePicker1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ToDoList";
-            this.Text = "Eric Malmströms assignment six todo list";
+            this.Text = "Eric Malmström ToDo List";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,5 +294,8 @@
         private OpenFileDialog openFileDialog1;
         private SaveFileDialog saveFileDialog1;
         private Label label3;
+        private Label label6;
+        private Label label5;
+        private Label label4;
     }
 }

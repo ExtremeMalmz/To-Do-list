@@ -12,49 +12,45 @@ namespace Task_Manager_Space
     /// <summary>
     ///  //TaskManager takes care of the handling of the list of Tasks 
     /// </summary>
-    
     internal class TaskManager
     {
         private List<TheTasks> tasks;
-        
-        //getter for list
+
+        /// <summary>
+        ///  getter for the list task
+        /// </summary>
         public List<TheTasks> Tasks 
         { 
-            get 
-            {
-                /// <summary>
-                ///  getter for the list task
-                /// </summary>
-                
+            get
+            { 
                 return tasks; 
             } 
         }
+
+        /// <summary>
+        /// constrcutor for the EventManager class
+        /// </summary>
         public TaskManager()
         {
-            /// <summary>
-            /// constrcutor for the EventManager class
-            /// </summary>
+            
 
             //creates a new list for the TaskManager
             tasks = new List<TheTasks>();
         }
 
+        /// <summary>
+        ///  //adds an object to the task list
+        /// </summary>
         public void AddATask(TheTasks task)
         {
-            /// <summary>
-            ///  //adds an object to the task list
-            /// </summary>
-
             tasks.Add(task);
-            //PrintAllTasks();
         }
 
+        /// <summary>
+        ///  //debug which prints out all the items in the tasks list
+        /// </summary>
         public void PrintAllTasks()
         {
-            /// <summary>
-            ///  //debug which prints out all the items in the tasks list
-            /// </summary>
-            
             Console.WriteLine("--ALL TASKS--");
             foreach (TheTasks task in tasks)
             {
