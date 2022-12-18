@@ -9,33 +9,31 @@ using Task_Space;
 using Task_Manager_Space;
 using System.Windows.Forms;
 using System.DirectoryServices;
+using System.Linq;
 
 namespace Assignmen6
 {
+    /// <summary>
+    ///  This is where the form code is, which can then be used with other namespaces
+    /// </summary>
     public partial class ToDoList : Form
     {
         /// <summary>
-        ///  This is where the form code is, which can then be used with other namespaces
+        ///  //constructor for the form, anything in here will run at the start of the program
         /// </summary>
-        
         private TaskManager taskmanager = new TaskManager();
         public ToDoList()
         {
-            /// <summary>
-            ///  //constructor for the form, anything in here will run at the start of the program
-            /// </summary>
-
             InitializeComponent();
             InitializeGUI();
         }
 
+        /// <summary>
+        ///  //Initializing of the GUI setting things 
+        ///  to values that need to be done for the smooth running of the 
+        /// </summary>
         private void InitializeGUI()
         {
-            /// <summary>
-            ///  //Initializing of the GUI setting things 
-            ///  to values that need to be done for the smooth running of the 
-            /// </summary>
-            
             //setting the datasource of the combobox to enum class
             priorityComboBox.DataSource = Enum.GetValues(typeof(ImportanceTypes));
             //making it so that only a dropdownlist is visible in the combobox, otherwise people can type things in there
@@ -56,12 +54,11 @@ namespace Assignmen6
             MessageBox.Show("For the time in the date time picker please use your arrow keys!");
         }
 
+        /// <summary>
+        /// //allows the user to create a TXT file in which to save data
+        /// </summary>
         private void saveDataFile_Click(object sender, EventArgs e)
         {
-            /// <summary>
-            /// //allows the user to create a TXT file in which to save data
-            /// </summary>
-            
             SaveFileDialog sfd = new SaveFileDialog();
             
             //sets the file to a txt file
@@ -83,11 +80,12 @@ namespace Assignmen6
             }
         }
 
+        /// <summary>
+        ///   //opens a file which gets set to the listboxs data 
+        /// </summary>
         private void openDataFile_Click(object sender, EventArgs e)
         {
-            /// <summary>
-            ///   //opens a file which gets set to the listboxs data 
-            /// </summary>
+            Console.WriteLine("Opening file");
 
             //clears the listBox as we do not want the previous files data in the new file + also sets the datasource to
             //null as to not crash it
@@ -117,61 +115,74 @@ namespace Assignmen6
                     //create a words which contains all the words we split the file row by
                     string[] words = lineInFile.Split(delimiterChars);
 
-                    //prints out all the words in the array, keeping this for debug purposes and future work
-                    /*
+                   
+                    //quick fix to the file not displaying all the to do list text
+                    string theWholeToDoText = "";
+                    int counter = 0;
                     foreach (var word in words)
                     {
-                        System.Console.WriteLine($"{word}");
+                        //prints out all the words in the array, keeping this for debug purposes and future 
+                        //System.Console.WriteLine($"{word}");
+                        counter++;
+                        if(counter > 2)
+                        {
+                            theWholeToDoText += " " + word;
+                        }
                     }
-                    */
 
                     //the Zen of python says that explicit is better than implicit
                     string datetime = words[0];
                     string priority = words[1];
-                    string toDoText = words[2];
+                    string toDoText = theWholeToDoText;
+                    Console.WriteLine(theWholeToDoText);
                     TheTasks newTask = new TheTasks(datetime, priority, toDoText);
                     taskmanager.AddATask(newTask);
 
                     //updates the listbox with our new values
-                    var x = taskmanager.Tasks;
-                    eventListBox.DataSource = x.Cast<TheTasks>().ToList();
+                    var tasks = taskmanager.Tasks;
+                    eventListBox.DataSource = tasks.Cast<TheTasks>().ToList();
                 }
                 reader.Close();
             }
         }
 
+        /// <summary>
+        ///  //adds an event to the list if there is nothing empty
+        /// </summary>
         private void addEventButton_Click(object sender, EventArgs e)
-        {
-            /// <summary>
-            ///  //adds an event to the list if there is nothing empty
-            /// </summary>
-
+        { 
             string datetime = dateTimePicker1.Text;
             string priority = priorityComboBox.Text;
             string toDoText = toDoTextBox.Text;
 
-            TheTasks newTask = new TheTasks(datetime,priority,toDoText);
-            taskmanager.AddATask(newTask);
+            //checks if the string in the todobox is empty, if it is then a messagebox appears
+            if(toDoText != string.Empty)
+            {
+                TheTasks newTask = new TheTasks(datetime, priority, toDoText);
+                taskmanager.AddATask(newTask);
 
-            var x = taskmanager.Tasks;
-            eventListBox.DataSource = x.Cast<TheTasks>().ToList();
+                var tasks = taskmanager.Tasks;
+                eventListBox.DataSource = tasks.Cast<TheTasks>().ToList();
+            }
+            else
+            {
+                MessageBox.Show("Empty todo lists are not allowed!");
+            }
         }
 
+        /// <summary>
+        ///  creates a new file which means we just initialize the application
+        /// </summary>
         private void newFile_Click(object sender, EventArgs e)
         {
-            /// <summary>
-            ///  creates a new file which means we just initialize the application
-            /// </summary>
-            
             InitializeGUI();
         }
 
+        /// <summary>
+        ///  //When the user wants to exit the application, though they are presented which the choice of not exiting
+        /// </summary>
         private void exitFile_Click(object sender, EventArgs e)
         {
-            /// <summary>
-            ///  //When the user wants to exit the application, though they are presented which the choice of not exiting
-            /// </summary>
-            
             DialogResult dialogResult = MessageBox.Show("Do you really want to exit?", "Exit Application", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {

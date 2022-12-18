@@ -1,11 +1,9 @@
 ﻿using System;
-
+/// <summary>
+///    //enums for the application, ranked in importance level
+/// </summary>
 public enum ImportanceTypes
 {
-    /// <summary>
-    ///    //enums for the application, ranked in importance level
-    /// </summary>
-  
     Very_important,
     Important,
     Normal,
